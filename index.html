@@ -3,14 +3,17 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Simple Transactional Email</title>
+    <title>Test CodeCrew Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Sura:wght@400;700&display=swap" rel="stylesheet">
+    <link href="fonts/import.css" rel="stylesheet">
     <style>
       /* -------------------------------------
           GLOBAL RESETS
       ------------------------------------- */
       
       /*All the styling goes here*/
-      
       img {
         border: none;
         -ms-interpolation-mode: bicubic;
@@ -19,9 +22,9 @@
 
       body {
         background-color: #f6f6f6;
-        font-family: sans-serif;
         -webkit-font-smoothing: antialiased;
         font-size: 14px;
+        font-family: 'Libre Baskerville', serif;
         line-height: 1.4;
         margin: 0;
         padding: 0;
@@ -48,6 +51,16 @@
         background-color: #f6f6f6;
         width: 100%; 
       }
+      
+      table[class=body] .table-section:first-child {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+
+      table[class=body] .table-section:last-child {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
 
       /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
       .container {
@@ -73,7 +86,7 @@
       ------------------------------------- */
       .main {
         background: #ffffff;
-        border-radius: 3px;
+        /* border-radius: 3px; */
         width: 100%; 
       }
 
@@ -97,7 +110,7 @@
         .footer p,
         .footer span,
         .footer a {
-          color: #999999;
+          color: rgb(91,91,91);
           font-size: 12px;
           text-align: center; 
       }
@@ -177,11 +190,11 @@
           text-transform: capitalize; 
       }
 
-      .btn-primary table td {
+      .btn-primary table td, a.btn-primary {
         background-color: #3498db; 
       }
 
-      .btn-primary a {
+      .btn-primary a, a.btn-primary {
         background-color: #3498db;
         border-color: #3498db;
         color: #ffffff; 
@@ -196,6 +209,25 @@
 
       .first {
         margin-top: 0; 
+      }
+
+      a.btn {
+        padding: 10px 30px 10px 30px;
+        text-decoration: none;
+        border-radius: 2.5px;
+        letter-spacing: 3.5px;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: 'Sura';
+      }
+      a.btn-orange {
+        background-color: #ff8e00 !important; 
+        border-color: #ff8e00 !important; 
+        color: #fff;
+      }
+
+      .w-50 {
+        width: 50%;
       }
 
       .align-center {
@@ -250,7 +282,7 @@
       ------------------------------------- */
       @media only screen and (max-width: 620px) {
         table[class=body] h1 {
-          font-size: 28px !important;
+          font-size: 48px !important;
           margin-bottom: 10px !important; 
         }
         table[class=body] p,
@@ -287,6 +319,29 @@
           height: auto !important;
           max-width: 100% !important;
           width: auto !important; 
+        }
+        #hero_main h2 {
+          margin-bottom: 60px !important;
+        }
+        #hero_main .btn,
+        #second_section .btn  {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        #third_section li p {
+          padding-right: 40px;
+        }
+      }
+      @media only screen and (max-width: 480px) {
+        table[class=body] h1 {
+          font-size: 36px !important;
+          margin-bottom: 10px !important; 
+        }
+        #hero_main .btn,
+        #second_section .btn  {
+          padding-left: 15px;
+          padding-right: 15px;
+          font-size: 85% !important;
         }
       }
 
@@ -328,8 +383,115 @@
           background-color: #34495e !important;
           border-color: #34495e !important; 
         } 
+        #third_section li p {
+          padding-right: 20px;
+        }
       }
 
+      #hero_main h1 {
+        line-height: normal;
+        margin-bottom: 15px;
+        font-size: 42px;
+      }
+
+      #hero_main h1,
+      #hero_main h2
+      {
+        font-family: 'SouvenirStd' !important;
+      }
+
+      #hero_main h2 {
+        margin-bottom: 40px;
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+
+      #hero_main .header-img {
+        text-align: center;
+        position: relative;
+        top: -3px;
+        height: 90px;
+      }
+      
+
+      #hero_main .btn,
+      #second_section .btn {
+        letter-spacing: 3.5px;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: 'Sura';
+      }
+
+      #second_section .main-paragraph,
+      #third_section .main-paragraph {
+        padding: 30px;
+        font-family: 'Libre Baskerville';
+        line-height: 2;
+        font-size: 17px;
+      }
+
+      #third_section .main-paragraph {
+        padding: 30px;
+        font-family: 'Libre Baskerville';
+        line-height: 2;
+        font-size: 18px;
+      }
+
+      #third_section li {
+        padding: 10px 0 10px 0;
+        text-align: left;
+        list-style-position: outside;
+      }
+
+      #third_section li p {
+        position: relative;
+        font-family: 'Libre Baskerville';
+        top: -3px;
+        font-size: 17px;
+        padding-left: 20px;
+        padding-right: 80px;
+      }
+
+      #third_section li:nth-child(1) {
+        list-style-image: url('images/1.svg');
+      }
+
+      #third_section li:nth-child(2) {
+        list-style-image: url('images/2.svg');
+      }
+
+      #third_section li:nth-child(3) {
+        list-style-image: url('images/3.svg');
+      }
+
+      #third_section li:nth-child(4) {
+        list-style-image: url('images/4.svg');
+      }
+
+      #third_section li:nth-child(5) {
+        list-style-image: url('images/5.svg');
+      }
+
+      #third_section li:nth-child(6) {
+        list-style-image: url('images/6.svg');
+      }
+
+      .footer .content-block {
+        font-family: 'Libre Baskerville';
+        line-height: 2;
+      }
+
+      .footer #nav_footer {
+        padding: 50px 0 10px 0;
+        font-family: 'Libre Baskerville';
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: rgb(91,91,91) !important;
+      }
+
+      .footer #nav_footer span {
+        padding: 0 5px 0 5px;
+      }
     </style>
   </head>
   <body class="">
@@ -340,34 +502,33 @@
         <td class="container">
           <div class="content">
 
-            <!-- START CENTERED WHITE CONTAINER -->
-            <table role="presentation" class="main">
+            <!-- START FIRST SECION: HERO -->
+            <table role="presentation" class="main table-section" style="background-image: url('images/hero_header2.png'); background-size: cover; background-position: center bottom; height:835px;" id="hero_main">
 
               <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="header-img">
+                  <img src="images/Header.png" width="140">
+                </td>
+              </tr>
               <tr>
                 <td class="wrapper">
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                     <tr>
                       <td>
-                        <p>Hi there,</p>
-                        <p>Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
-                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
-                          <tbody>
-                            <tr>
-                              <td align="left">
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                  <tbody>
-                                    <tr>
-                                      <td> <a href="http://htmlemail.io" target="_blank">Call To Action</a> </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <p>This is a really simple email template. Its sole purpose is to get the recipient to click the button with no distractions.</p>
-                        <p>Good luck! Hope it works.</p>
+                        <h1 class="align-center">Get <b>30% OFF</b></h1>
+                        <h1 class="align-center">All Tops And Shorts</h1>
+                        <h2 class="align-center">ENDS 09/10</h2>
+                      </td>
+                    </tr>
+                  </table>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="w-50 align-center">
+                        <a href="#" class="btn btn-orange">SHOP MEN'S</a>
+                      </td>
+                      <td class="w-50 align-center">
+                        <a href="#" class="btn btn-orange">SHOP WOMEN'S</a>
                       </td>
                     </tr>
                   </table>
@@ -376,20 +537,123 @@
 
             <!-- END MAIN CONTENT AREA -->
             </table>
-            <!-- END CENTERED WHITE CONTAINER -->
 
+            <!-- START THE SECOND AREA -->
+            <table role="presentation" class="table-section" id="second_section">
+
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="padding-top: 40px"><img src="images/section2_header.png"></td>
+                    </tr>
+                  </table>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="align-center"><p class="main-paragraph">All Seadon clothing is designed with both durability and style in mind, using ultra-light, eco-friendly fabrics and quick-drying finishes to keep you cool on <i>and</i> off the trail. Our tees and shorts are perfect for a busy day in the city or your next camping trip.</p></td>
+                    </tr>
+                  </table>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="w-50 align-center">
+                        <a href="#" class="btn btn-orange">SHOP MEN'S</a>
+                      </td>
+                      <td class="w-50 align-center">
+                        <a href="#" class="btn btn-orange">SHOP WOMEN'S</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- END MAIN CONTENT AREA -->
+
+
+            <!-- START THE THIRD AREA -->
+            <table role="presentation" class="table-section" id="third_section">
+
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="padding-top: 40px"><img src="images/section3_header.png"></td>
+                    </tr>
+                  </table>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="align-center"><p class="main-paragraph">Our gear helps you enjoy all the natural wonder that Earth has to offer without leaving a footprint.<br><b>Here’s what sets us apart.</b></p></td>
+                    </tr>
+                  </table>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="align-left" style="padding-left: 20px;">
+                        <ul class="list_section3">
+                          <li><p>Our tees dry 4x faster than cotton.</p></li>
+                          <li><p>Seadon tops feature moisture-wicking technology for ultimate freshness.</p></li>
+                          <li><p>Our clothes are made from the best <u>recycled materials</u> we can find.</p></li>
+                          <li><p>We use a patented knitting process to ensure a silky soft feel.</p></li>
+                          <li><p>All Seadon items are <u>ethically produced</u></p></li>
+                          <li><p>We're a <b>1% For The Planet Member,</b> supporting environmental organizations with every sale.</p></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </table>
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="align-center">
+                        <a href="#" class="btn btn-orange">SEE MORE</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- END MAIN CONTENT AREA -->
+
+            <!-- START THE FOURTH AREA -->
+            <table role="presentation" class="table-section" id="fourth_section">
+              <tr>
+                <td style="padding-top: 40px"><img src="images/Instagram.png"></td>
+              </tr>
+            </table>
+
+            <div class="content">
             <!-- START FOOTER -->
             <div class="footer">
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+              <table role="presentation" class="table-section">
                 <tr>
-                  <td class="content-block">
-                    <span class="apple-link">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>
-                    <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif">Unsubscribe</a>.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content-block powered-by">
-                    Powered by <a href="http://htmlemail.io">HTMLemail</a>.
+                  <td class="wrapper">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="padding-top: 40px"><img src="images/logo_footer.png" width="120"></td>
+                      </tr>
+                      <tr>
+                        <td id="nav_footer">
+                          <span>EXPLORE</span>
+                          <span>WHO WE ARE</span>
+                          <span>SUSTAINABILITY</span>
+                          <span>CONTACT US</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="wrapper" style="padding-bottom: 0">
+                          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td><img src="images/icons_footer.png" width="350"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="content-block">
+                          <br> To manage your subscriptions click <a href="#">here</a>. To unsubscribe click <a href="#">here</a>.
+                          <br>
+                          <span class="apple-link">Copyright &copy; 2021 Seadon</span>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>

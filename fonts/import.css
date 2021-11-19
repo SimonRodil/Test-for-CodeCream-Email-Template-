@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "SouvenirStd";
+  src: url('SouvenirStd-Light.otf') format('opentype');
+  font-style: normal;
+}
+@font-face {
+    font-family: "SouvenirStd";
+    src: url('SouvenirStd-Demi.otf') format('opentype');
+    font-weight: bold;
+}
